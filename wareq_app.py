@@ -1,21 +1,25 @@
-from flask import Flask, render_template, request
-from keras.models import load_model
-from keras.preprocessing import image
-import keras
+# loading the model and preparing for prediction 
+from tensorflow import keras
 import tensorflow as tf
-# Loading the data : 
+print(tf.__version__)
+print(keras.__version__)
+import numpy as np
+import tensorflow as tf
 import pandas as pd 
-# 
-clases_names = pd.read_csv("data/classes.csv",index_col=[0])
-clases_names.info()
-classes_names = clases_names.sort_values(by="num",inplace=True)
-clases_names.head()
-clases_names.index = range(1, 305, 1)
-clases_names.to_csv("data/data.csv",index=False)
-print(clases_names.iloc[0,1])
+model = keras.models.load_model(r"model\mymodel97.h5")
+from flask import Flask, render_template,request
+import os 
 app = Flask(__name__)
 
-model = load_model(r'C:\Users\un_cs\Documents\capStoneProject\w\Wareq\model\mymodel97.h5')
+clases_names = pd.read_csv("Data/classes.csv",index_col=[0])
+#clases_names.info()
+classes_names = clases_names.sort_values(by="num",inplace=True)
+#clases_names.head()
+clases_names.index = range(1, 305, 1)
+#clases_names.to_csv("Data/data.csv",index=False)
+#print(clases_names.iloc[0,1])
+app = Flask(__name__)
+
 
 model.make_predict_function()
 import numpy as np
@@ -23,10 +27,10 @@ def predict_label(img_path):
     image_size = (224,224)
 #model.summary()
 # #Predict model
-    img = keras.preprocessing.image.load_img(
+    img = tf.keras.preprocessing.image.load_img(
     img_path, target_size=image_size
     )
-    img_array = keras.preprocessing.image.img_to_array(img)/255
+    img_array = tf.keras.preprocessing.image.img_to_array(img)/255
     img_array = tf.expand_dims(img_array, 0)  # Create batch axis
     predictions = model.predict(img_array)
     output=np.argmax(predictions,axis=1)
@@ -50,7 +54,7 @@ def predict_label(img_path):
     '92': 92, '93': 93, '94': 94, '95': 95, '96': 96, '97': 97, '98': 98, '99': 99}
     classes = dict((v,k) for k,v in classes.items())
     result = np.array_str(output)
-    print(type(result))
+    #print(type(result))
     r = result.lstrip("[").rstrip("]")
     result = int(r)
     o = int(classes[result])
@@ -60,10 +64,10 @@ def predict_label(img_path):
     g = f.iloc[o,0]
     c = f.iloc[o,1]
     t = f.iloc[o,2]
-    print("The images is predicted : ",r)
-    print(
-        "This image is predicted as ",output
-    )
+    #print("The images is predicted : ",r)
+    #print(
+    #    "This image is predicted as ",output
+    #)
     return r ,g,c,t
 
 
