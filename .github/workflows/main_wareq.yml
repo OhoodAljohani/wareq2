@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'wareq'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_30F83191255C43B38793F4C9DDF96053 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C4A730747E364456B11BB5285E23A70D }}
