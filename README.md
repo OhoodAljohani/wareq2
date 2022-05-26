@@ -45,10 +45,10 @@ To deploy this project run
 |10% |نسبة الاختبار   |
 
 
-![Uploading github.png…]()
+
 
 ## 🔗 Links
-[![github](https://user-images.githubusercontent.com/59482214/170516602-d1fe31df-6e2f-445e-a7dd-393b397c430f.png)](https://github.com/OhoodAljohani/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/OhoodAljohani/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/](https://www.linkedin.com/in/ohood-aljohani-415719202/))
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)]([https://twitter.com/](https://twitter.com/UdiO13))
 
