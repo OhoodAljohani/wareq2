@@ -1,5 +1,5 @@
 
-[logo](https://user-images.githubusercontent.com/59482214/170513866-e6293384-6398-4418-b6e8-79388af5c852.png)
+![Logo](https://user-images.githubusercontent.com/59482214/170513866-e6293384-6398-4418-b6e8-79388af5c852.png)
 
 
 # وارق الذكي 
