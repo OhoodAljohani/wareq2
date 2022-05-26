@@ -11,7 +11,7 @@
  
 ## واجهة المستخدم : 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 ## طريقة الاستخدام  : 
 1. قم بتحميل صورة 
 2. اضغط على زر ابدأ
@@ -44,6 +44,12 @@ To deploy this project run
 |90% | نسبة التدريب   |
 |10% |نسبة الاختبار   |
 
+
+
+
+
+
+<img width="184" alt="Screenshot 2022-05-26 181528" src="https://user-images.githubusercontent.com/59482214/170518638-eca3e99b-75a4-4131-94e1-6a8ee460188c.png">
 
 
 
