@@ -28,12 +28,6 @@ To deploy this project run
 
 
 
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
 
 ## معلومات النموذج 
 
@@ -53,7 +47,7 @@ To deploy this project run
 
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
+[![portfolio](https://www.flaticon.com/free-icon/github_1051326?term=github&page=1&position=4&page=1&position=4&related_id=1051326&origin=search)](https://github.com/OhoodAljohani/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/](https://www.linkedin.com/in/ohood-aljohani-415719202/))
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)]([https://twitter.com/](https://twitter.com/UdiO13))
 
