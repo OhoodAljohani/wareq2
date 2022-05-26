@@ -12,6 +12,11 @@
 ## واجهة المستخدم : 
 
 
+<img width="935" alt="ui" src="https://user-images.githubusercontent.com/59482214/170519596-f0808c98-4ff0-4d5e-adb6-fff738c36015.png">
+<img width="857" alt="uir" src="https://user-images.githubusercontent.com/59482214/170519661-b3e6bcae-03b1-4da3-b361-3d410b2b9ab3.png">
+
+
+
 ## طريقة الاستخدام  : 
 1. قم بتحميل صورة 
 2. اضغط على زر ابدأ
