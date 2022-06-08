@@ -6,7 +6,31 @@ print(keras.__version__)
 import numpy as np
 import tensorflow as tf
 import pandas as pd 
-model = keras.models.load_model("/model/mymodel97.h5")
+import s3fs
+import zipfile
+import tempfile
+from pathlib import Path
+import logging
+
+
+AWS_ACCESS_KEY="AKIAVN6Q233WCVBSNNYB"
+AWS_SECRET_KEY="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"
+BUCKET_NAME="elasticbeanstalk-us-east-1-373563252460"
+def get_s3fs():
+  return s3fs.S3FileSystem(key=AWS_ACCESS_KEY, secret=AWS_SECRET_KEY)
+
+def s3_get_keras_model(model_name: str) -> keras.Model:
+  with tempfile.TemporaryDirectory() as tempdir:
+    s3fs = get_s3fs()
+    # Fetch and save the zip file to the temporary directory
+    s3fs.get(f"{BUCKET_NAME}/{model_name}.zip", f"{tempdir}/{model_name}.zip")
+    # Extract the model zip file within the temporary directory
+    with zipfile.ZipFile(f"{tempdir}/{model_name}.zip") as zip_ref:
+        zip_ref.extractall(f"{tempdir}/{model_name}")
+    # Load the keras model from the temporary directory
+    return keras.models.load_model(f"{tempdir}/{model_name}")
+model = s3_get_keras_model("mymodel97")
+#model = keras.models.load_model("/model/mymodel97.h5")
 from flask import Flask, render_template,request
 import os 
 app = Flask(__name__)
