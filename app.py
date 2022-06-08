@@ -6,7 +6,7 @@ print(keras.__version__)
 import numpy as np
 import tensorflow as tf
 import pandas as pd 
-model = keras.models.load_model(r"model\mymodel97.h5")
+model = keras.models.load_model("https://github.com/OhoodAljohani/wareq/blob/main/model/mymodel97.h5")
 from flask import Flask, render_template,request
 import os 
 app = Flask(__name__)
